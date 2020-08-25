@@ -1,5 +1,5 @@
 {
-  "name": "react-exception",
+  "name": "@isumix/react-exception",
   "version": "1.0.0",
   "description": "A flexible React's Error Boundary implementation",
   "keywords": [

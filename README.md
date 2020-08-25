@@ -1,5 +1,5 @@
 
-# react-exception
+# @isumix/react-exception
 
 ### A flexible React's Error Boundary implementation
 
@@ -24,11 +24,11 @@ The `<Exception>` component will `catch` any errors `throw`n in the inner compon
 ## Install
 
 ```sh
-npm install --save react-exception
+npm install --save @isumix/react-exception
 ```
 
 ```sh
-yarn add react-exception
+yarn add @isumix/react-exception
 ```
 
 ## Example
@@ -37,7 +37,7 @@ yarn add react-exception
 
 ```tsx
 import * as React from "react";
-import { Exception } from "react-exception";
+import { Exception } from "@isumix/react-exception";
 
 const ComponentWillThrow = () => {
   throw "BOOM!";
@@ -92,7 +92,7 @@ In event handlers and asynchronous code, you can `useEventThrow` hook to be able
 > Available since React 16.8
 
 ```tsx
-import { useEventThrow } from "react-exception";
+import { useEventThrow } from "@isumix/react-exception";
 
 const ComponentWillThrow = () => {
   const eventThrow = useEventThrow();
