@@ -9,6 +9,11 @@
   ],
   "license": "ISC",
   "author": "Igor Sukharev",
+  "homepage": "https://github.com/isumix/react-exception#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isumix/react-exception.git"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
