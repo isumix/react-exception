@@ -19,7 +19,7 @@ so users will be presented with a `fallback` view in case of failure.
 The `<Exception>` component will `catch` any errors `throw`n in the inner components' lifecycle methods.
 
 > Error boundaries do not catch errors for: event handlers, asynchronous code and SSR.
-> See [useEventThrow](#useEventThrow-hook) below for solution.
+> See [useEventThrow](#useEventThrow) below for solution.
 
 ## Install
 
@@ -50,10 +50,7 @@ export default () => (
 );
 ```
 
-# API
-
-## Exception component
-
+# Exception
 
 ```html
 <Exception
@@ -65,12 +62,20 @@ export default () => (
 </Exception>
 ```
 
-### fallback property
+## fallback
 
+> If no `fallback` is provided the `error` will be re`throw`n
+
+```tsx
+const fallbackString = 'An error has occurred!';
+```
+```tsx
+const fallbackNode = <strong>An error has occurred!</strong>;
+```
 ```tsx
 const FallbackComponent = ({ error, reset }) => (
   <b style={{ color: "red" }}>
-    An error "{error.message}" has occurred
+    An error "{error.message}" has occurred!
     <button type="button" onClick={reset}>
       Reset
     </button>
@@ -78,14 +83,13 @@ const FallbackComponent = ({ error, reset }) => (
 );
 ```
 
-### onError property
+## onError
 
 ```ts
 const handleError = (error, errorInfo) => console.log(error, errorInfo);
 ```
 
-
-## useEventThrow hook
+# useEventThrow
 
 In event handlers and asynchronous code, you can `useEventThrow` hook to be able to catch exceptions in Error Boundary.
 
@@ -107,4 +111,3 @@ const ComponentWillThrow = () => {
   );
 };
 ```
-

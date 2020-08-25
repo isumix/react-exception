@@ -1,18 +1,26 @@
 {
   "name": "@isumix/react-exception",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A flexible React's Error Boundary implementation",
   "keywords": [
     "react",
     "error",
-    "boundary"
+    "boundary",
+    "throw",
+    "exception",
+    "event",
+    "async",
+    "catch"
   ],
   "license": "ISC",
-  "author": "Igor Sukharev",
+  "author": "Igor Sukharev <imixaly4@gmail.com>",
   "homepage": "https://github.com/isumix/react-exception#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/isumix/react-exception.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isumix/react-exception/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
