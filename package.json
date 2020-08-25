@@ -1,0 +1,22 @@
+{
+  "name": "react-exception",
+  "version": "1.0.0",
+  "description": "A flexible React's Error Boundary implementation",
+  "keywords": [
+    "react",
+    "error",
+    "boundary"
+  ],
+  "license": "ISC",
+  "author": "Igor Sukharev",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.46",
+    "react": "^16.13.1",
+    "typescript": "^4.0.2"
+  }
+}
