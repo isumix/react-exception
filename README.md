@@ -19,7 +19,7 @@ so users will be presented with a `fallback` view in case of failure.
 The `<Exception>` component will `catch` any errors `throw`n in the inner components' lifecycle methods.
 
 > Error boundaries do not catch errors for: event handlers, asynchronous code and SSR.
-> See [useEventThrow](#useEventThrow) below for solution.
+> See [useEventThrow](#useeventthrow) below for solution.
 
 ## Install
 
@@ -73,7 +73,7 @@ const fallbackString = 'An error has occurred!';
 const fallbackNode = <strong>An error has occurred!</strong>;
 ```
 ```tsx
-const FallbackComponent = ({ error, reset }) => (
+const FallbackComponent = ({ error, reset }: ExceptionFallbackProps) => (
   <b style={{ color: "red" }}>
     An error "{error.message}" has occurred!
     <button type="button" onClick={reset}>
@@ -86,7 +86,7 @@ const FallbackComponent = ({ error, reset }) => (
 ## onError
 
 ```ts
-const handleError = (error, errorInfo) => console.log(error, errorInfo);
+const handleError: ExceptionErrorHandler = (error, errorInfo) => console.log(error, errorInfo);
 ```
 
 # useEventThrow
@@ -100,7 +100,6 @@ import { useEventThrow } from "@isumix/react-exception";
 
 const ComponentWillThrow = () => {
   const eventThrow = useEventThrow();
-
   return (
     <p>
       Some text
@@ -110,4 +109,14 @@ const ComponentWillThrow = () => {
     </p>
   );
 };
+```
+
+Please note: for asynchronous code, there is a [better approach](https://www.npmjs.com/package/@isumix/react-suspendable)
+
+```html
+<Exception fallback="Rejected">
+  <Suspense fallback="Pending">
+    <CustomComponent /> has asynchronous code and could throw exceptions
+  </Suspense>
+</Exception>
 ```
