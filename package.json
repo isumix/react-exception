@@ -1,6 +1,6 @@
 {
   "name": "@isumix/react-exception",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A flexible React's Error Boundary implementation",
   "keywords": [
     "react",
@@ -10,7 +10,8 @@
     "exception",
     "event",
     "async",
-    "catch"
+    "catch",
+    "typescript"
   ],
   "license": "ISC",
   "author": "Igor Sukharev <imixaly4@gmail.com>",
@@ -24,8 +25,10 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist/**/*"],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/react": "^16.9.46",
