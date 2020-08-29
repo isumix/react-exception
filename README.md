@@ -3,7 +3,7 @@
 
 ### A flexible React's Error Boundary implementation
 
-> Available since React [16.6](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
+> Available since React [16.6](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html). Works with React Native.
 
 ## Description
 
@@ -33,7 +33,9 @@ yarn add @isumix/react-exception
 
 ## Example
 
-> [Play with full example in codesandbox](https://codesandbox.io/s/react-exception-9zh48?file=/src/App.tsx)
+> [Play with **web** example in codesandbox.io](https://codesandbox.io/s/react-exception-9zh48?file=/src/App.tsx)
+
+> [Play with **native** example in snack.expo.io](https://snack.expo.io/@isumix/react-exception)
 
 ```tsx
 import * as React from "react";
@@ -111,7 +113,7 @@ const ComponentWillThrow = () => {
 };
 ```
 
-Please note: for asynchronous code, there is a [better approach](https://www.npmjs.com/package/@isumix/react-suspendable)
+Please note: for asynchronous code, there is a [better approach](https://github.com/isumix/react-suspendable#readme)
 
 ```html
 <Exception fallback="Rejected">
